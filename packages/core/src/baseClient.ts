@@ -1,0 +1,31 @@
+import { MonitorOptions, Transport } from './types'
+
+export let getTransport: () => Transport | null = () => null
+
+export class Monitoring {
+    private transport: Transport | null = null
+
+    constructor(private options: MonitorOptions) {}
+
+    init(transport: Transport) {
+        this.transport = transport
+        getTransport = () => transport
+        this.options.integration?.forEach(integration => {
+            integration.init(transport)
+        })
+    }
+
+    reportMessage(message: string) {
+        this.transport?.send({
+            type: 'message',
+            message,
+        })
+    }
+
+    reportEvent(event: unknown) {
+        this.transport?.send({
+            type: 'event',
+            event,
+        })
+    }
+}

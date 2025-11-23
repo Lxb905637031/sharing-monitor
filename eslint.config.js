@@ -52,7 +52,15 @@ module.exports = tseslint.config(
         },
         rules: {
             'prettier/prettier': 'error',
-            'simple-import-sort/import': 'error',
+            'simple-import-sort/imports': 'error',
+            '@typescript-eslint/no-unused-expressions': [
+                'error',
+                {
+                    allowShortCircuit: true,
+                    allowTernary: true,
+                    allowTaggedTemplates: false,
+                },
+            ],
         },
     },
     frontendConfig,

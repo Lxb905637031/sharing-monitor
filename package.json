@@ -49,6 +49,8 @@
         "commitizen": "4.3.1",
         "@commitlint/cli": "19.5.0",
         "@commitlint/config-conventional": "19.5.0",
-        "fast-glob": "3.3.2"
+        "fast-glob": "3.3.2",
+        "tsup": "8.3.0",
+        "rimraf": "6.1.2"
     }
 }
