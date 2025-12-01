@@ -18,5 +18,5 @@ export class Integration implements IIntegration {
 
 export interface MonitorOptions {
     dsn: string
-    integration?: IIntegration[]
+    integrations?: IIntegration[]
 }

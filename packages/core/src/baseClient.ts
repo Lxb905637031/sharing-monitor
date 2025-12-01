@@ -10,7 +10,7 @@ export class Monitoring {
     init(transport: Transport) {
         this.transport = transport
         getTransport = () => transport
-        this.options.integration?.forEach(integration => {
+        this.options.integrations?.forEach(integration => {
             integration.init(transport)
         })
     }
