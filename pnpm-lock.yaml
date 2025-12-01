@@ -66,6 +66,12 @@ importers:
         specifier: 8.8.1
         version: 8.8.1(eslint@9.39.1(jiti@2.6.1))(typescript@5.5.3)
 
+  packages/browser-utils:
+    dependencies:
+      '@sharing/monitor-sdk-core':
+        specifier: workspace:*
+        version: link:../core
+
   packages/core: {}
 
 packages:

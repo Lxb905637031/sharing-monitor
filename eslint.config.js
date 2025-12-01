@@ -39,6 +39,7 @@ const backendConfig = {
         '@typescript-eslint/interface-name-prefix': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
         'no-console': 'error',
+        'no-empty': 'off',
     },
 }
 

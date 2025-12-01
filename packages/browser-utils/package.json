@@ -1,0 +1,24 @@
+{
+    "name": "@sharing/monitor-sdk-browser-utils",
+    "version": "1.0.0",
+    "main": "build/cjs/index.js",
+    "module": "build/esm/index.mjs",
+    "types": "build/types/index.d.ts",
+    "scripts": {
+        "build:watch": "pnpm build:watch:types & pnpm build:watch:transpile",
+        "build:watch:types": "tsc -p tsconfig.types.json",
+        "build:watch:transpile": "tsup --watch",
+        "build": "pnpm build:types && pnpm build:transpile ",
+        "build:types": "tsc -p tsconfig.types.json",
+        "build:transpile": "tsup",
+        "clean": "rimraf build",
+        "typecheck": "tsc --noEmit"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "dependencies": {
+        "@sharing/monitor-sdk-core": "workspace:*"
+    }
+}
